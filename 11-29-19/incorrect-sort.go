@@ -38,13 +38,11 @@ func order(i, j int, input []int) {
 		tmp := input[i]   //tmp stores the value of i
 		swapi := input[j] //assign j to i
 		swapj := tmp      //assign tmp to j
-
 		fmt.Printf("new values for i: %d and j: %d\n", swapi, swapj)
 
-		//return a new slice with swapped values?
-		newSortedSlice[0] = swapi
-		newSortedSlice[1] = swapj
-
+		fmt.Printf("replacing elements at newSortedSlice[i]: %d, and newSortedSlice[j]: %d\n", newSortedSlice[i], newSortedSlice[j])
+		newSortedSlice[i] = swapi
+		newSortedSlice[j] = swapj
 		printSlice(newSortedSlice)
 
 		fmt.Printf("\n")
