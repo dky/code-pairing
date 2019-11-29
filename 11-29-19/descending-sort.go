@@ -12,11 +12,11 @@ func bubbleSort(input []int) {
 
 	//Start from index position 1
 	//dky why do we start from 1 vs 0?
-	for i := 1; i < len(input); i++ {
+	for i := 0; i < len(input); i++ {
 		//Start from index position 0
-		for j := 0; j < len(input); j++ {
-			fmt.Printf("Number of elements in slice: %d\n", len(input))
-			fmt.Printf("Unsorted slice: %d\n", input)
+		for j := i + 1; j < len(input); j++ {
+			fmt.Printf("unsorted slice: %d\n", input)
+			fmt.Printf("number of elements in slice: %d\n", len(input))
 			fmt.Printf("index i: %d, index j: %d\n", i, j)
 			fmt.Printf("element i: %d element j: %d\n", input[i], input[j])
 			order(i, j, input)
