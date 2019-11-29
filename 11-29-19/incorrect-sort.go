@@ -20,6 +20,10 @@ func bubbleSort(input []int) {
 	}
 }
 
+func printSlice(currentSlice []int) {
+	fmt.Println("Current state of slice:", currentSlice)
+}
+
 // order takes in the input[i] and input[j] and swaps their place values if i > j
 func order(i, j int, inputSlice []int) []int {
 	fmt.Printf("comparing element i: %d and element j: %d\n", i, j)
@@ -31,11 +35,11 @@ func order(i, j int, inputSlice []int) []int {
 		j = tmp  //assign tmp to j
 
 		fmt.Printf("i: %d, j: %d\n", i, j)
-		fmt.Println(inputSlice)
 		fmt.Printf("\n")
+		printSlice(inputSlice)
 	} else {
 		fmt.Println("i is not greater than j, going back to top of loop j")
-		fmt.Println(inputSlice)
+		printSlice(inputSlice)
 		fmt.Printf("\n")
 	}
 
@@ -43,8 +47,8 @@ func order(i, j int, inputSlice []int) []int {
 }
 
 func main() {
-	unsortedList := []int{30, 10, 20}
-	//unsortedList := []int{30, 10, 20, 40}
-	//unsortedList := []int{50, 40, 20, 30, 10}
+	unsortedList := []int{30, 10, 20} //3 element list
+	//unsortedList := []int{30, 10, 20, 40} //4 element list
+	//unsortedList := []int{50, 40, 20, 30, 10} //5 element list
 	bubbleSort(unsortedList)
 }
