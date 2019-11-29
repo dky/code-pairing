@@ -4,7 +4,7 @@ import "fmt"
 
 // printSlice returns the current state of the working slice.
 func printSlice(currentSlice []int) {
-	fmt.Println("Current state of slice:", currentSlice)
+	fmt.Println("current state of slice:", currentSlice)
 }
 
 // bubbleSort takes in a slice of ints
@@ -20,30 +20,39 @@ func bubbleSort(input []int) {
 			//fmt.Printf("index i: %d, element i: %d index j: %d, element j: %d\n", i, input[i], j, input[j])
 			fmt.Printf("index i: %d, index j: %d\n", i, j)
 			fmt.Printf("element i: %d element j: %d\n", input[i], input[j])
-			order(input[i], input[j], input)
+			order(i, j, input)
 		}
 	}
 }
 
 // order takes in the input[i] and input[j] and swaps their place values if i > j
-func order(i, j int, inputSlice []int) []int {
-	fmt.Printf("comparing element i: %d and element j: %d\n", i, j)
-	if i > j {
-		fmt.Println("i is greater than j, swapping values")
+func order(i, j int, input []int) {
 
-		tmp := i //tmp stores the value of i
-		i = j    //assign j to i
-		j = tmp  //assign tmp to j
+	fmt.Printf("comparing element i: %d and element j: %d\n", input[i], input[j])
 
-		fmt.Printf("i: %d, j: %d\n", i, j)
+	if input[i] > input[j] {
+		fmt.Println("element i is greater than element j, swapping values")
+
+		newSortedSlice := input
+
+		tmp := input[i]   //tmp stores the value of i
+		swapi := input[j] //assign j to i
+		swapj := tmp      //assign tmp to j
+
+		fmt.Printf("new values for i: %d and j: %d\n", swapi, swapj)
+
+		//return a new slice with swapped values?
+		newSortedSlice[0] = swapi
+		newSortedSlice[1] = swapj
+
+		printSlice(newSortedSlice)
+
 		fmt.Printf("\n")
-		printSlice(inputSlice)
 	} else {
 		fmt.Println("i is not greater than j, going back to top of loop j")
-		printSlice(inputSlice)
+		printSlice(input)
 		fmt.Printf("\n")
 	}
-	return inputSlice
 }
 
 func main() {
