@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+// printSlice returns the current state of the working slice.
+func printSlice(currentSlice []int) {
+	fmt.Println("Current state of slice:", currentSlice)
+}
+
 // bubbleSort takes in a slice of ints
 func bubbleSort(input []int) {
 	fmt.Printf("Number of elements in slice: %d\n", len(input))
@@ -18,10 +23,6 @@ func bubbleSort(input []int) {
 			order(input[i], input[j], input)
 		}
 	}
-}
-
-func printSlice(currentSlice []int) {
-	fmt.Println("Current state of slice:", currentSlice)
 }
 
 // order takes in the input[i] and input[j] and swaps their place values if i > j
@@ -42,7 +43,6 @@ func order(i, j int, inputSlice []int) []int {
 		printSlice(inputSlice)
 		fmt.Printf("\n")
 	}
-
 	return inputSlice
 }
 
