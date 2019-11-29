@@ -4,14 +4,11 @@ import "fmt"
 
 func main() {
 	toSort := [5]int{50, 40, 20, 30, 10}
-
 	sorted := bubbleSort(toSort)
-
 	incorrectSort(toSort)
 
 	fmt.Println("Initial array:", toSort)
 	fmt.Println("Sorted array:", sorted)
-
 }
 
 func bubbleSort(input [5]int) [5]int {
@@ -35,7 +32,7 @@ func bubbleSort(input [5]int) [5]int {
 }
 
 func incorrectSort(input [5]int) {
-	for i := 0; i < len(input); i++ {
+	for i := 1; i < len(input); i++ {
 		for j := 0; j < len(input); j++ {
 			if input[i] > input[j] {
 				//fmt.Println(i, j)
@@ -50,6 +47,5 @@ func incorrectSort(input [5]int) {
 	}
 	//fmt.Println("input array")
 	fmt.Println("Incorrect array:", input)
-
 	//return input
 }
