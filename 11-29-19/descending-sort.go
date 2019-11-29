@@ -33,17 +33,15 @@ func order(i, j int, input []int) {
 	if input[i] > input[j] {
 		fmt.Println("element i is greater than element j, swapping values")
 
-		newSortedSlice := input
-
 		tmp := input[i]   //tmp stores the value of i
 		swapi := input[j] //assign j to i
 		swapj := tmp      //assign tmp to j
 		fmt.Printf("new values for i: %d and j: %d\n", swapi, swapj)
 
-		fmt.Printf("replacing elements at newSortedSlice[i]: %d, and newSortedSlice[j]: %d\n", newSortedSlice[i], newSortedSlice[j])
-		newSortedSlice[i] = swapi
-		newSortedSlice[j] = swapj
-		printSlice(newSortedSlice)
+		fmt.Printf("replacing elements at input[i]: %d, and input[j]: %d\n", input[i], input[j])
+		input[i] = swapi
+		input[j] = swapj
+		printSlice(input)
 
 		fmt.Printf("\n")
 	} else {
@@ -54,8 +52,8 @@ func order(i, j int, input []int) {
 }
 
 func main() {
-	//unsortedList := []int{30, 10, 20} //3 element list
+	unsortedList := []int{35, 12, 40} //3 element list
 	//unsortedList := []int{30, 10, 20, 40} //4 element list
-	unsortedList := []int{50, 40, 20, 30, 10} //5 element list
+	//unsortedList := []int{50, 40, 20, 30, 10} //5 element list
 	bubbleSort(unsortedList)
 }
