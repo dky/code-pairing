@@ -54,8 +54,8 @@ func order(i, j int, input []int) {
 }
 
 func main() {
-	unsortedList := []int{30, 10, 20} //3 element list
-	//unsortedList := []int{30, 10, 20, 40} //4 element list
+	//unsortedList := []int{30, 10, 20} //3 element list
+	unsortedList := []int{30, 10, 20, 40} //4 element list
 	//unsortedList := []int{50, 40, 20, 30, 10} //5 element list
 	bubbleSort(unsortedList)
 }
