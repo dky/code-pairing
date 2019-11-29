@@ -46,6 +46,6 @@ func incorrectSort(input [5]int) {
 		}
 	}
 	//fmt.Println("input array")
-	fmt.Println("Incorrect array:", input)
+	fmt.Println("Incorrect sort:", input)
 	//return input
 }
