@@ -8,6 +8,7 @@ func bubbleSort(input []int) {
 	fmt.Printf("Unsorted slice: %d\n\n", input)
 
 	//Start from index position 1
+	//dky why do we start from 1 vs 0?
 	for i := 1; i < len(input); i++ {
 		//Start from index position 0
 		for j := 0; j < len(input); j++ {
