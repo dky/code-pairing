@@ -13,7 +13,7 @@ func main() {
 	fmt.Println(bubbleSort(unsortedSlice3))
 }
 
-// turns out this is more a hybrid of selection sort and bubble sort
+// this is the real bubble sort algorithme , sorry my bad... it's super similar to the one we did though
 func bubbleSort(arr []int) []int {
 
 	if len(arr) == 0 {
@@ -22,9 +22,9 @@ func bubbleSort(arr []int) []int {
 
 	for i := 0; i < len(arr); i++ {
 		isSwapped := false
-		for j := i + 1; j < len(arr); j++ {
-			if arr[i] > arr[j] {
-				swap(&arr[i], &arr[j])
+		for j := 0; j < len(arr)-i-1; j++ {
+			if arr[j] > arr[j+1] {
+				swap(&arr[j], &arr[j+1])
 				isSwapped = true
 			}
 		}
