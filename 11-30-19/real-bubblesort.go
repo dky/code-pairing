@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	helpers "github.com/gitflash/go-helpers" // git@github.com:gitflash/go-helpers.git
+)
 
 func main() {
 	// some tests
@@ -24,7 +28,7 @@ func bubbleSort(arr []int) []int {
 		isSwapped := false
 		for j := 0; j < len(arr)-i-1; j++ {
 			if arr[j] > arr[j+1] {
-				swap(&arr[j], &arr[j+1])
+				helpers.Swap(&arr[j], &arr[j+1])
 				isSwapped = true
 			}
 		}
@@ -35,10 +39,4 @@ func bubbleSort(arr []int) []int {
 	}
 
 	return arr
-}
-
-func swap(left *int, right *int) {
-	tmp := *left
-	*left = *right
-	*right = tmp
 }
