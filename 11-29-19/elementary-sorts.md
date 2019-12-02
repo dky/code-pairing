@@ -1,6 +1,6 @@
 - [x] Bubble Sort
+- [x] Selection Sort
 - [] Insertion Sort
-- [] Selection Sort
 
 - [] Quick Sort
 - [] Merge Sort
