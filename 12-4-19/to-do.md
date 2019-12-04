@@ -1,1 +1,1 @@
-[] Quick sort
+[] Merge sort
