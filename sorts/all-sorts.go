@@ -35,5 +35,19 @@ func main() {
 	fmt.Println("Output Array: ", sort.Insertion(unsrotedArray))
 	fmt.Println("-------------------------------")
 
+	// Merge Sort
+	helpers.Shuffle(unsrotedArray) // reshuffle array
+	fmt.Println()
+	fmt.Println("Merge Sort ----------------")
+	fmt.Println("Input Array:  ", unsrotedArray)
+	fmt.Println("Output Array: ", sort.Merge(unsrotedArray, 0, len(unsrotedArray)-1))
+	fmt.Println("-------------------------------")
+
 	// Quick Sort
+	helpers.Shuffle(unsrotedArray) // reshuffle array
+	fmt.Println()
+	fmt.Println("Quick Sort ----------------")
+	fmt.Println("Input Array:  ", unsrotedArray)
+	fmt.Println("Output Array: ", sort.Quick(unsrotedArray, 0, len(unsrotedArray)-1))
+	fmt.Println("-------------------------------")
 }
