@@ -14,3 +14,5 @@
 #     right = right(4) - 1 = 3
 
 # TODO: What is .sort time complexity in Python?
+# https://www.quora.com/What-is-the-time-complexity-of-the-Python-built-in-sorted-function
+# timsort
