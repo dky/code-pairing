@@ -25,13 +25,14 @@ class Solution:
                 fast = fast.next
 
         return True
-
-    def reverse(self, head: ListNode) -> ListNode:
-        node = head
-
-        while node.next is not None:
-            temp = node
-            node = node.next
-            node.next = temp
-
+    def reverseList(self, head: ListNode) -> ListNode:
+        prev = None
+        current = head 
+        while current is not None: 
+            next = current.next
+            current.next = prev 
+            prev = current 
+            current = next
+        head = prev
+        
         return head
